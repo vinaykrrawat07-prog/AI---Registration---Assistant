@@ -1,0 +1,56 @@
+import re
+print("      AI REGISTRATION ASSISTANT")
+print("======================================")
+
+print("\nHello! Welcome to the AI Registration Assistant.")
+print("I will help you complete your registration.\n")
+
+name = input("Please enter your full name: ")
+
+while True:
+    email= input("Please enter your email: ")
+
+    if re.match(r"^[\w\.-]+@[\w\.-]+\.\w+$", email):
+     break
+else:
+        print("❌ Invalid email. Please enter a valid email address.")
+
+program = input("Which program are you interested in? ")
+
+experience = input("What is your experience level? ")
+
+print("\n======================================")
+print("       REGISTRATION SUMMARY")
+print("======================================")
+
+print("Name:", name)
+print("Email:", email)
+print("Program:", program)
+print("Experience:", experience)
+
+print("\nRegistration information recorded successfully!") 
+print("\nYou can now start a conversation with the assistant.")
+
+message = input("You: ")
+
+if message.strip().lower() in ["hi", "hello", "hey", "good morning"]:
+    print("Assistant: Hello! How can I help you with your registration?")
+
+elif message.strip().lower() in ["register", "apply", "sign up", "join"]:
+    print("Assistant: Sure! I can help you with the registration.")
+elif "my name is" in message.strip().lower():
+    print("Assistant: Nice to meet you!")
+elif "email" in message.strip().lower():
+    print("Assistant: Please provide your email address.") 
+elif "program" in message.strip().lower():
+    print("Assistant: Please tell me which program you are interested in.")
+elif "experience" in message.strip().lower():
+    print("Assistant: Please tell me your experience level.")
+confirm = input("\nDo you want to confirm your registration? (yes/no): ")
+print("Assistant: Registration confirmed successfully!" if confirm.lower() == "yes" else "Assistant: Registration cancelled.")
+confirm = input("\nDo you want to confirm your registration? (yes/no): ")
+
+if confirm.lower() == "yes":
+    print("Assistant: Registration confirmed successfully!")
+else:
+    print("Assistant: Registration cancelled.")
