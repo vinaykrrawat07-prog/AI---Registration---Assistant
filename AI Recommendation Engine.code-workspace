@@ -1,0 +1,45 @@
+print("AI Internship Recommendation Engine")
+
+name = input("Enter your name: ")
+skills = input("Enter your skills: ")
+interest = input("Enter your area of interest: ")
+
+print("\nYour Profile")
+print("Name:", name)
+print("Skills:", skills)
+print("Interest:", interest)
+print("\nRecommended Internship:")
+
+if "python" in skills.lower() and ("data" in interest.lower() or "ai" in interest.lower()):
+    print("Python Data Science Internship")
+elif "python" in skills.lower() and "ai" in interest.lower():
+    print("AI/ML Internship")
+elif "web" in skills.lower():
+    print("Web Development Internship")
+else:
+    print("General Software Development Internship")
+    print("\nRecommended Internships:")
+
+if "python" in skills.lower() and ("data" in interest.lower() or "ai" in interest.lower()):
+    print("1. AI/ML Internship")
+    print("2. Data Science Internship")
+elif "web" in skills.lower():
+    print("1. Web Development Internship")
+else:
+    print("1. General Software Development Internship")
+    print("\nSkill Match:")
+
+if "python" in skills.lower():
+    print("✓ Python skill matched")
+if "data analysis" in skills.lower():
+    print("✓ Data Analysis skill matched")
+if "power bi" in skills.lower():
+    print("✓ Power BI skill matched")
+    print("\nRecommended Learning Resource:")
+
+if "python" in skills.lower():
+    print("Python Programming Course")
+elif "power bi" in skills.lower():
+    print("Power BI Data Analytics Course")
+else:
+    print("Programming Fundamentals Course")
